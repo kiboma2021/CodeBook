@@ -1,5 +1,5 @@
 
-export const Register = () => {
+export const BookDetail = () => {
   return (
     <div>
       

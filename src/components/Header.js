@@ -1,17 +1,32 @@
+import { Link,NavLink } from 'react-router-dom'
 import Logo from '../assets/logo.jpeg'
+import { useEffect, useState } from 'react'
 
 export const Header = () => {
+    const [darkMode, setDarkMode] = useState(true);
+
+    useEffect(() => {
+        
+    },[darkMode])
+
+
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
-            <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
+            <Link to="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src={Logo} className="h-8" alt="Kibs Logo" />
                 <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Kibs CodeBook</span>
-            </a>
+            </Link>
             <div className="flex items-center gap-3">
+                <div onClick={()=>setDarkMode()}>
+
+                </div>
                 <i className='fas fa-cog text-2xl' ></i>
-                <i className='fas fa-search text-2xl' ></i>
-                <i className='fas fa-shopping-cart text-2xl' ></i>
+                <NavLink to="/search"><i className='fas fa-search text-2xl' ></i> </NavLink>
+                <NavLink to="/cart"><i className='fas fa-shopping-cart text-2xl' ></i> </NavLink>
+                
+                
+                
                 
 
                 <div id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
