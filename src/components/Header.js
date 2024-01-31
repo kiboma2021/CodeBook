@@ -4,7 +4,7 @@ import Logo from '../assets/logo.jpeg'
 
 
 export const Header = () => {
-    const [darkMode, setDarkMode] = useState(true);
+    const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem('darkMode'))||false);
     const [hiddenMode, setHiddenMode] = useState(true);
 
     useEffect(() => {
