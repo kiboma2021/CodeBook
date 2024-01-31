@@ -1,9 +1,9 @@
 
 export const Home = () => {
   return (
-    <div>
+    <main>
         <p>Home Page</p>
       
-    </div>
+    </main>
   )
 }

@@ -1,8 +1,8 @@
 
 export const Register = () => {
   return (
-    <div>
+    <main>
       
-    </div>
+    </main>
   )
 }

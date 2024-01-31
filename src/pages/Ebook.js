@@ -1,8 +1,9 @@
 
 export const Ebook = () => {
   return (
-    <div>
+    <main>
+      <p>Books Page</p>
       
-    </div>
+    </main>
   )
 }

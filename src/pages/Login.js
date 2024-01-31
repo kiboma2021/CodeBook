@@ -1,8 +1,8 @@
 
 export const Login = () => {
   return (
-    <div>
+    <main>
       
-    </div>
+    </main>
   )
 }

@@ -1,8 +1,9 @@
 
 export const BookDetail = () => {
   return (
-    <div>
+    <main>
+      <p> Book detail</p>
       
-    </div>
+    </main>
   )
 }

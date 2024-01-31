@@ -1,10 +1,10 @@
 
 export const SearchPage = () => {
   return (
-    <div>
+    <main>
       <p>Search Page</p>
       
-    </div>
+    </main>
   )
 }
 
