@@ -3,7 +3,7 @@ import { AllRoutes } from "./routes/AllRoutes";
 
 function App() {
   return (
-    <div>
+    <div className="flex flex-col dark:bg-gray-800 ">
       <Header />
       <hr />
 

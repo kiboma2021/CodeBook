@@ -11,10 +11,10 @@ export const Footer = () => {
                 <a href="#" className="hover:underline me-4 md:me-6"><i className="fa-brands fa-instagram"></i></a>
             </li>
             <li>
-                <a href="#" className="hover:underline me-4 md:me-6"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#" className="hover:underline me-4 md:me-6"><i className="fa-brands fa-x-twitter"></i></a>
             </li>
             <li>
-                <a href="#" className="hover:underline me-4 md:me-6"><i class="fa-brands fa-square-github"></i></a>
+                <a href="#" className="hover:underline me-4 md:me-6"><i className="fa-brands fa-square-github"></i></a>
             </li>
         </ul>
         </div>
