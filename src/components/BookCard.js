@@ -9,7 +9,7 @@ export const BookCard = ({book}) => {
 
     <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <Link to={`/book/${id}`}>
-            <img className="p-8 rounded-t-lg" src={BookImg}alt={title} />
+            <img className="p-8 rounded-t-lg" src={image} alt={BookImg} />
         </Link>
         <div className="px-5 pb-5">
             <Link to={`/book/${id}`}>

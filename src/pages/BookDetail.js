@@ -20,14 +20,14 @@ export const BookDetail = () => {
 
       <div className="flex flex-col text-center  " >
         <div>
-          <p className="font-bold text-4xl" >{book.title}</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error unde quisquam magni vel eligendi nam.</p>
+          <p className="font-bold text-4xl my-2" >{book.title}</p>
+          <p className="text-xl my-5">{book.description}</p>
         </div>
 
-        <div className="flex justify-center text-center">
-          <img src={BookImg} alt="" />
-          <div>
-            <p>$ {book.price}</p>
+        <div className="flex flex-wrap justify-center text-center gap-3">
+          <img className="rounded-xl" src={book.image} alt={BookImg} />
+          <div className="flex flex-col flex-wrap items-start gap-3 ml-5" >
+            <p className="text-2xl">$ {book.price}</p>
             <div className="flex items-center mt-2.5 mb-5">
                 <div className="flex items-center space-x-1 rtl:space-x-reverse">
                     <svg className="w-4 h-4 text-yellow-300" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 20">
@@ -47,11 +47,16 @@ export const BookDetail = () => {
                     </svg>
                 </div>
             </div>
-            <div>
-              <button></button><button></button><button></button>
+            <div className="my-5">
+              {book.best_seller ? (<span className="bg-slate-100 text-yellow-600 p-3 m-3 font-bold rounded-xl">BEST SELLER</span>):null}
+              {book.in_stock ? (<span className="bg-slate-100 text-green-600 p-3 m-3 font-bold rounded-xl" >INSTOCK</span>):null}
+              <span className="bg-slate-100 text-blue-600 p-3 m-3 font-bold rounded-xl">{book.size}MB</span>
             </div>
-            <button>add to cart</button>
-            <p>{book.description}</p>
+            <button type="button" className="text-white ml-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add To Cart <i class="fa fa-plus" aria-hidden="true"></i>  </button>
+            <div className="w-full max-w-xl mx-auto">
+              <p className="text-lg">{book.summary}</p>
+            </div>
+            
           </div>
 
 
