@@ -5,8 +5,6 @@ function App() {
   return (
     <div className="flex flex-col dark:bg-gray-800 ">
       <Header />
-      <hr />
-
       <AllRoutes />
 
 

@@ -7,3 +7,14 @@ export const BookDetail = () => {
     </main>
   )
 }
+
+
+
+
+
+
+
+
+
+
+

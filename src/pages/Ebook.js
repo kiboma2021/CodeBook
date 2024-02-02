@@ -7,15 +7,24 @@ export const Ebook = (title) => {
   const url = "http://localhost:8000/books"
   const {data:books } =  useFetch(url)
   useTitle(title)
+
+  console.log(books)
+
   return (
-    <main>
-      { books && books.map(book =>(
-        <div key={book.id}>
-          <BookCard book={book} />
+    <main >
+      <div className="flex justify-between  text-3xl font-bold mb-5 dark:text-white">
+        <p>All eBooks ({books?(books.length):""})</p>
+        <div className="px-4 py-1 rounded dark:bg-slate-600">
+        <i class="fas fa-ellipsis-v"></i>
+
         </div>
-      ))}
-      
-      
+      </div>
+      <div className="flex justify-center flex-wrap gap-5">
+          { books && books.map((book) =>(
+              <BookCard book={book} key={book.id} />
+          ))}
+      </div>
+
     </main>
   )
 }
