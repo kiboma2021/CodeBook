@@ -15,7 +15,7 @@ export const Ebook = (title) => {
       <div className="flex justify-between  text-3xl font-bold mb-5 dark:text-white">
         {error?(<p>{error}</p>):(<p>All eBooks ({books?(books.length):""})</p>) }
         <div className="px-4 py-1 rounded dark:bg-slate-600">
-        <i class="fas fa-ellipsis-v"></i>
+        <i className="fas fa-ellipsis-v"></i>
 
         </div>
       </div>

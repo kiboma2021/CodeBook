@@ -52,7 +52,7 @@ export const BookDetail = () => {
               {book.in_stock ? (<span className="bg-slate-100 text-green-600 p-3 m-3 font-bold rounded-xl" >INSTOCK</span>):null}
               <span className="bg-slate-100 text-blue-600 p-3 m-3 font-bold rounded-xl">{book.size}MB</span>
             </div>
-            <button type="button" className="text-white ml-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add To Cart <i class="fa fa-plus" aria-hidden="true"></i>  </button>
+            <button type="button" className="text-white ml-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add To Cart <i className="fa fa-plus" aria-hidden="true"></i>  </button>
             <div className="w-full max-w-xl mx-auto">
               <p className="text-lg">{book.summary}</p>
             </div>
