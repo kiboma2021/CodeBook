@@ -31,8 +31,7 @@ export const BookDetail = () => {
       setInCart(false);
     }
 
-
-  },[])
+  },[cartItems,params.id])
 
 
   return (
