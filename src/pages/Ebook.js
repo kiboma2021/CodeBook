@@ -8,7 +8,7 @@ export const Ebook = (title) => {
   const {data:books,error } =  useFetch(url)
   useTitle(title)
 
-  console.log(books)
+  
 
   return (
     <main >

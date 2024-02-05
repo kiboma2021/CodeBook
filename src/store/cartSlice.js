@@ -12,7 +12,11 @@ const cartSlice = createSlice({
             const total = state.total + action.payload.price;
             return {...state,total, cartList: updatedCart}
         },
-        remove(state,action) {},
+        remove(state,action) {
+            const updatedCart = state.cartList.filter(item=> item.id !== action.payload.id)
+            const total = state.total - action.payload.price;
+            return {...state,total, cartList: updatedCart}
+        },
     }
 })
 

@@ -1,11 +1,29 @@
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
 import BookImg from '../assets/book.avif';
 import { add, remove } from '../store/cartSlice';
 
+
 export const BookCard = ({book}) => {
     const dispatch = useDispatch();
-  const {id,title,description,image,price,rating,best_seller } = book;
+    const [inCart,setInCart] = useState(false);
+
+
+    const cartItems = useSelector(state => state.cartState.cartList);
+    const {id,title,description,image,price,rating,best_seller } = book;
+
+
+    useEffect(() => {
+        const productInCart=cartItems.find(item=> item.id ===id);
+        if(productInCart){
+            setInCart(true);
+        } else {
+            setInCart(false);
+        }
+    },[cartItems,id]);
+
+  
   
   return (
 
@@ -39,7 +57,12 @@ export const BookCard = ({book}) => {
             </div>
             <div className="flex items-center justify-between">
                 <span className="text-3xl font-bold text-gray-900 dark:text-white">${price}</span>
-                <span onClick={()=>dispatch(add(book))} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</span>
+                {inCart?(
+                <span onClick={()=>dispatch(remove(book))} className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Remove from Cart</span> 
+                ):(
+                    <span onClick={()=>dispatch(add(book))} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</span>
+                 )  }
+                
             </div>
         </div>
     </div>

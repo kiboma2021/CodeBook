@@ -1,6 +1,8 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import BookImg from '../assets/book.avif'
+import { useDispatch, useSelector } from "react-redux";
+import { add,remove } from "../store/cartSlice";
 
 export const BookDetail = () => {
   const params = useParams();
@@ -15,6 +17,24 @@ export const BookDetail = () => {
     }
     fetchBook();
   },[params.id])
+
+  const cartItems = useSelector(state => state.cartState.cartList);
+  const dispatch = useDispatch();
+  const [inCart,setInCart] = useState(false);
+
+  useEffect(()=>{
+    const productInCart=cartItems.find(item => item.id === params.id)
+
+    if(productInCart){
+      setInCart(true);
+    } else {
+      setInCart(false);
+    }
+
+
+  },[])
+
+
   return (
     <main className="flex justify-center dark:text-white " >
 
@@ -52,7 +72,12 @@ export const BookDetail = () => {
               {book.in_stock ? (<span className="bg-slate-100 text-green-600 p-3 m-3 font-bold rounded-xl" >INSTOCK</span>):null}
               <span className="bg-slate-100 text-blue-600 p-3 m-3 font-bold rounded-xl">{book.size}MB</span>
             </div>
-            <button type="button" className="text-white ml-5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-xl px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Add To Cart <i className="fa fa-plus" aria-hidden="true"></i>  </button>
+            {inCart?(
+                <span onClick={()=>dispatch(remove(book))} className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">Remove from Cart</span> 
+                ):(
+                    <span onClick={()=>dispatch(add(book))} className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add to cart</span>
+                 )  }
+                
             <div className="w-full max-w-xl mx-auto">
               <p className="text-lg">{book.summary}</p>
             </div>
