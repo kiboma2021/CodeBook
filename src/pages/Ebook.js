@@ -5,7 +5,7 @@ import { useTitle } from "../hooks/useTitle"
 
 export const Ebook = (title) => {
   const url = "http://localhost:8000/books"
-  const {data:books } =  useFetch(url)
+  const {data:books,error } =  useFetch(url)
   useTitle(title)
 
   console.log(books)
@@ -13,7 +13,7 @@ export const Ebook = (title) => {
   return (
     <main >
       <div className="flex justify-between  text-3xl font-bold mb-5 dark:text-white">
-        <p>All eBooks ({books?(books.length):""})</p>
+        {error?(<p>{error}</p>):(<p>All eBooks ({books?(books.length):""})</p>) }
         <div className="px-4 py-1 rounded dark:bg-slate-600">
         <i class="fas fa-ellipsis-v"></i>
 
