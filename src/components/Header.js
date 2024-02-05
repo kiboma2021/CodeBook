@@ -30,19 +30,16 @@ export const Header = () => {
                 </div>
                 
                 <NavLink to="/search"><i className='fas fa-search text-2xl' ></i> </NavLink>
-                <NavLink to="/cart"><i className='fas fa-shopping-cart text-2xl' ></i> </NavLink>
+                <NavLink to="/cart" className="flex flex-col text-center relative">
+                    <span className='p-1 rounded-full text-sm bg-red-500 absolute -top-4 -right-1'>0</span>
+                    <i className='fas fa-shopping-cart text-2xl' > </i> 
+                </NavLink>
                 
                 
                 <div onClick={()=>setHiddenMode(!hiddenMode)} id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
                     <i className='fas fa-user-circle text-2xl' ></i>
                 </div>
-                
-
-
-
-
-
-                
+                                
             </div>
         </div>
 
