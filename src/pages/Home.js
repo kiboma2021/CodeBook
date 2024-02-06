@@ -1,5 +1,6 @@
 import { useTitle } from "../hooks/useTitle"
 import { Banner,StudentReview } from "../components"
+import { FAQ } from "./FAQ"
 
 
 export const Home = (title) => {
@@ -18,6 +19,12 @@ export const Home = (title) => {
       </div>
       
       <StudentReview />
+
+      <div className="flex justify-center underline decoration-2 underline-offset-8 my-10 text-2xl dark:text-white">
+         <p>Question in mind?</p>
+      </div>
+
+      <FAQ />
         
 
 
