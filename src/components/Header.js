@@ -44,48 +44,62 @@ export const Header = () => {
 
                 {/* Dropdown menu */}
                 <div className={`${hiddenMode?"hidden":""} relative mt-10`}>
-            <div
-                className="absolute end-0 z-10 mt-2 w-56 divide-y divide-gray-100 rounded-md border border-gray-100 bg-white shadow-lg"
-                role="menu"
-            >
-                <div className="p-2">
-                <a
-                    href="#"
-                    className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-                    role="menuitem"
-                >
-                    View on Storefront
-                </a>
+                    <div
+                        className="absolute end-0 z-10 mt-2 w-56 divide-y divide-gray-100 rounded-md bg-white dark:bg-gray-800 shadow-lg"
+                        role="menu"
+                    >
+                        <div className="p-2">
+                        <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
+                            role="menuitem"
+                        >
+                            omayioben@gmail.com
+                        </a>
+                        <hr />
 
-                <a
-                    href="#"
-                    className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-                    role="menuitem"
-                >
-                    View Warehouse Info
-                </a>
+                        <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
+                            role="menuitem"
+                        >
+                            All eBooks
+                        </a>
 
-                <a
-                    href="#"
-                    className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-                    role="menuitem"
-                >
-                    Duplicate Product
-                </a>
+                        <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
+                            role="menuitem"
+                        >
+                            Dashboard
+                        </a>
 
-                <a
-                    href="#"
-                    className="block rounded-lg px-4 py-2 text-sm text-gray-500 hover:bg-gray-50 hover:text-gray-700"
-                    role="menuitem"
-                >
-                    Unpublish Product
-                </a>
-                </div>
+                        <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
+                            role="menuitem"
+                        >
+                            Logout
+                        </a>
 
-                <div className="p-2">
-                 <p>dhdshjfebj</p>
-                </div>
-            </div>
+                        <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
+                            role="menuitem"
+                        >
+                            Login
+                        </a>
+
+                        <a
+                            href="#"
+                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
+                            role="menuitem"
+                        >
+                            Register
+                        </a>
+
+                        </div>
+                    </div>
                 </div>              
             </div>
         </div>
