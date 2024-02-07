@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-import BannerImg from '../assets/banner.avif'
+import BannerImg from '../../assets/banner.avif'
 
 export const Banner = () => {
   return (

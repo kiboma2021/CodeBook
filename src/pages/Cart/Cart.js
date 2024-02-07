@@ -1,5 +1,5 @@
-import { useTitle } from "../hooks/useTitle"
-import { CartCard } from "../components"
+import { useTitle } from "../../hooks/useTitle"
+import { CartCard } from "../../components"
 import { useSelector } from "react-redux"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"

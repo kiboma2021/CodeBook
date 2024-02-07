@@ -1,5 +1,5 @@
-import { useTitle } from "../hooks/useTitle"
-import { Banner,StudentReview } from "../components"
+import { useTitle } from "../../hooks/useTitle"
+import { Banner,StudentReview } from "../../components"
 import { FAQ } from "./FAQ"
 
 
