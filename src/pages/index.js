@@ -9,3 +9,4 @@ export { Ebook } from './Ebook';
 export { PageNotFound } from './PageNotFound';
 export { BookDetail } from './BookDetail';
 export { FAQ } from './FAQ';
+export { Payment } from './Payment';

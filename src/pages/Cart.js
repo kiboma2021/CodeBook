@@ -2,6 +2,7 @@ import { useTitle } from "../hooks/useTitle"
 import { CartCard } from "../components"
 import { useSelector } from "react-redux"
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 export const Cart = (title) => {
   useTitle(title)
@@ -59,9 +60,9 @@ export const Cart = (title) => {
             <p>Add eBooks to your cart from our store collection.</p>
           </div>
 
-          <div>
+          <Link to='/ebooks'>
             <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Continue Shopping <i className='fas fa-shopping-cart text-white' > </i> </button>
-          </div>
+          </Link>
           
         </div>
       )}
