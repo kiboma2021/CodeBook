@@ -4,7 +4,7 @@ import Logo from '../assets/logo.jpeg'
 import { useSelector } from 'react-redux';
 
 
-export const Header = () => {
+export const Header = ({toogleSearch,settoogleSearch}) => {
     const [darkMode, setDarkMode] = useState(JSON.parse(localStorage.getItem('darkMode'))||false);
     const [hiddenMode, setHiddenMode] = useState(true);
 
@@ -19,6 +19,10 @@ export const Header = () => {
     },[darkMode])
 
     const cartItems = useSelector(state=> state.cartState.cartList);
+
+    const handleSearch =()=>{
+        settoogleSearch(!toogleSearch);
+    }
   return (
     <nav className="bg-white py-1 border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -31,7 +35,8 @@ export const Header = () => {
                     <i className='fas fa-cog text-2xl' ></i>
                 </div>
                 
-                <NavLink to="/search"><i className='fas fa-search text-2xl' ></i> </NavLink>
+                <i onClick={()=>handleSearch()} className='fas fa-search text-2xl' ></i> 
+                
                 <NavLink to="/cart" className="flex flex-col text-center relative">
                     <span className='p-1 rounded-full text-sm bg-red-500 absolute -top-4 -right-1'>{cartItems.length}</span>
                     <i className='fas fa-shopping-cart text-2xl' > </i> 

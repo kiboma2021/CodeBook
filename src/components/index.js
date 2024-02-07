@@ -5,6 +5,7 @@ export { BookCard } from "./BookCard";
 export { Banner } from "../pages/Home/Banner";
 export { StudentReview } from "../pages/Home/StudentReview";
 export { CartCard } from "./CartCard";
+export { SearchCard } from "./SearchCard";
 
 
 
