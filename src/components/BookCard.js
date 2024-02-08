@@ -29,7 +29,11 @@ export const BookCard = ({book}) => {
 
     <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <Link to={`/book/${id}`}>
-            <img className="p-8 rounded-t-lg" src={image} alt={BookImg} />
+            <a href="/" className="relative" >
+                {best_seller?(<span className="absolute top-4 left-2 px-2 bg-orange-500 bg-opacity-90 text-white rounded">Best Seller</span>):""}
+                <img className="rounded-t-lg w-full h-64" src={image} alt={BookImg} />
+            </a>
+            
         </Link>
         <div className="px-5 pb-5">
             <Link to={`/book/${id}`}>
