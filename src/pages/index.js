@@ -5,7 +5,7 @@ export { Home } from './Home/Home';
 export { Login } from './Auth/Login';
 export { Register } from './Auth/Register';
 export { SearchPage } from './SearchPage';
-export { Ebook } from './Ebook';
+export { Ebook } from './Books/Ebook';
 export { PageNotFound } from './PageNotFound';
 export { BookDetail } from './BookDetail';
 export { FAQ } from './Home/FAQ';
