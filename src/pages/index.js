@@ -10,3 +10,4 @@ export { PageNotFound } from './PageNotFound';
 export { BookDetail } from './BookDetail';
 export { FAQ } from './Home/FAQ';
 export { Payment } from './Cart/Payment';
+export { ScrollToTop } from './ScrollToTop';
