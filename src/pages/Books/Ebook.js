@@ -3,9 +3,14 @@ import { BookCard } from "../../components"
 import { useTitle } from "../../hooks/useTitle"
 import { TableFilter } from "./TableFilter"
 import { useState } from "react"
+import { useLocation } from "react-router-dom"
 
 export const Ebook = (title) => {
-  const url = "http://localhost:8000/books"
+
+  const search = useLocation().search;
+  const searchTerm = new URLSearchParams(search).get("q");
+
+  const url = `http://localhost:8000/books?title_like=${searchTerm?searchTerm:""}`
   const {data:books,error } =  useFetch(url)
   useTitle(title)
 

@@ -9,7 +9,7 @@ function App() {
     <div className="flex flex-col dark:bg-gray-800 ">
       <Header toogleSearch={toogleSearch} settoogleSearch={settoogleSearch} />
 
-      { toogleSearch? (<SearchCard />):("") }
+      { toogleSearch && <SearchCard /> }
       
       <AllRoutes />
 
