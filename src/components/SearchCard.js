@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-export const SearchCard = () => {
+export const SearchCard = ({settoogleSearch}) => {
 
     const navigate = useNavigate();
     const searchRef = useRef();
@@ -9,6 +9,7 @@ export const SearchCard = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
         navigate(`/ebooks?q=${searchRef.current.value}`);
+        settoogleSearch(false);
     };
   return (
     <div className="flex justify-center my-10">
