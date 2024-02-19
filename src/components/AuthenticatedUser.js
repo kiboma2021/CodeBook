@@ -47,7 +47,7 @@ export const AuthenticatedUser = ({setHiddenMode,hiddenMode}) => {
         </Link>
 
         <Link onClick={()=>setHiddenMode(!hiddenMode)}
-            to="/"
+            to="/register"
             className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
             role="menuitem"
         >
