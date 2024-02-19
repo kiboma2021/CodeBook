@@ -7,13 +7,13 @@ export const AuthenticatedUser = ({setHiddenMode,hiddenMode}) => {
     role="menu"
 >
         <div className="p-2">
-        <a
-            href="#"
+        <Link
+            to="/"
             className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
             role="menuitem"
         >
             omayioben@gmail.com
-        </a>
+        </Link>
         <hr />
 
         <Link to="/ebooks" onClick={()=>setHiddenMode(!hiddenMode)}
@@ -24,36 +24,35 @@ export const AuthenticatedUser = ({setHiddenMode,hiddenMode}) => {
         </Link>
 
         <Link to="/dashboard" onClick={()=>setHiddenMode(!hiddenMode)}
-            href="#"
             className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
             role="menuitem"
         >
             Dashboard
         </Link>
 
-        <a
-            href="#"
+        <Link
+            to="/"
             className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
             role="menuitem"
         >
             Logout
-        </a>
+        </Link>
 
-        <a
-            href="#"
+        <Link
+            to="/login"
             className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
             role="menuitem"
         >
             Login
-        </a>
+        </Link>
 
-        <a
-            href="#"
+        <Link
+            to="/"
             className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
             role="menuitem"
         >
             Register
-        </a>
+        </Link>
 
         </div>
     </div>
