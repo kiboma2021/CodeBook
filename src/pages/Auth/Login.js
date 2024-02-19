@@ -27,6 +27,10 @@ export const Login = () => {
                       <p className="text-sm font-light text-gray-500 dark:text-gray-400">
                           Don’t have an account yet? <a href="#" className="font-medium text-indigo-600 hover:underline dark:text-indigo-500">Sign up</a>
                       </p>
+                      <p className="text-sm font-light text-gray-500 dark:text-gray-400">
+                          Don’t want to sign up? <a href="#" className="font-medium text-indigo-600 hover:underline dark:text-indigo-500">Login as a guest</a>
+                      </p>
+
                   </form>
               </div>
           </div>
