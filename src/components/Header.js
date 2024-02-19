@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link,NavLink } from 'react-router-dom'
 import Logo from '../assets/logo.jpeg'
 import { useSelector } from 'react-redux';
+import { AuthenticatedUser } from './AuthenticatedUser';
 
 
 export const Header = ({toogleSearch,settoogleSearch}) => {
@@ -49,61 +50,8 @@ export const Header = ({toogleSearch,settoogleSearch}) => {
 
                 {/* Dropdown menu */}
                 <div className={`${hiddenMode?"hidden":""} relative mt-10`}>
-                    <div
-                        className="absolute end-0 z-10 mt-2 w-56 divide-y divide-gray-100 rounded-md bg-white dark:bg-gray-800 shadow-lg"
-                        role="menu"
-                    >
-                        <div className="p-2">
-                        <a
-                            href="#"
-                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
-                            role="menuitem"
-                        >
-                            omayioben@gmail.com
-                        </a>
-                        <hr />
+                    <AuthenticatedUser setHiddenMode={setHiddenMode} hiddenMode={hiddenMode} />
 
-                        <Link to="/ebooks" onClick={()=>setHiddenMode(!hiddenMode)}
-                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
-                            role="menuitem"
-                        >
-                            All eBooks
-                        </Link>
-
-                        <Link to="/dashboard" onClick={()=>setHiddenMode(!hiddenMode)}
-                            href="#"
-                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
-                            role="menuitem"
-                        >
-                            Dashboard
-                        </Link>
-
-                        <a
-                            href="#"
-                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
-                            role="menuitem"
-                        >
-                            Logout
-                        </a>
-
-                        <a
-                            href="#"
-                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
-                            role="menuitem"
-                        >
-                            Login
-                        </a>
-
-                        <a
-                            href="#"
-                            className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
-                            role="menuitem"
-                        >
-                            Register
-                        </a>
-
-                        </div>
-                    </div>
                 </div>              
             </div>
         </div>
