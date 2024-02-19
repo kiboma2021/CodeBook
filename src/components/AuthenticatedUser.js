@@ -30,7 +30,7 @@ export const AuthenticatedUser = ({setHiddenMode,hiddenMode}) => {
             Dashboard
         </Link>
 
-        <Link
+        <Link onClick={()=>setHiddenMode(!hiddenMode)}
             to="/"
             className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
             role="menuitem"
@@ -38,7 +38,7 @@ export const AuthenticatedUser = ({setHiddenMode,hiddenMode}) => {
             Logout
         </Link>
 
-        <Link
+        <Link onClick={()=>setHiddenMode(!hiddenMode)}
             to="/login"
             className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
             role="menuitem"
@@ -46,7 +46,7 @@ export const AuthenticatedUser = ({setHiddenMode,hiddenMode}) => {
             Login
         </Link>
 
-        <Link
+        <Link onClick={()=>setHiddenMode(!hiddenMode)}
             to="/"
             className="block px-4 py-2 hover:bg-gray-300 hover:text-gray-700"
             role="menuitem"
